@@ -1,40 +1,35 @@
-<!-- Пакети -->
-<section id="packages">
-  <h2>Наші пакети</h2>
-  <p>Виберіть рівень підтримки та інструментів, який вам підходить:</p>
-  <ul>
-    <li>
-      <strong>Basic (199 ₴)</strong>  
-      • 6 шаблонів заяв (DOCX + PDF)  
-      • Інструкція користувача (4 стор.)  
-      • Чек-ліст “Терміни подачі” (1 стор.)  
-      • Онлайн-оплата та ZIP з документами  
-    </li>
-    <li>
-      <strong>Pro (499 ₴)</strong>  
-      • Все з пакету Basic  
-      • Автоматичне заповнення заяв через веб-форму  
-      • Перевірка статусу відправки  
-      • Телеграм-бот для нагадувань про терміни  
-    </li>
-    <li>
-      <strong>Enterprise (999 ₴)</strong>  
-      • Все з пакету Pro  
-      • Консультація юриста по Zoom  
-      • Підготовка індивідуального пакету документів  
-      • API-інтеграція для масових заяв  
-    </li>
-  </ul>
-</section>
+<li>
+  <strong>Basic (199 ₴)</strong><br>
+  • 6 шаблонів заяв (DOCX + PDF)<br>
+  • Інструкція користувача (4 стор.)<br>
+  • Чек-ліст “Терміни подачі” (1 стор.)<br>
+  • Онлайн-оплата та ZIP з документами<br>
 
-<!-- Електронні інструменти -->
-<section id="digital-tools">
-  <h2>Електронні сервіси</h2>
-  <ul>
-    <li>Генератор заяв у браузері (DOCX + PDF)</li>
-    <li>Онлайн-оплата (LiqPay, Monobank Pay)</li>
-    <li>Подача заяв через API / веб-форми</li>
-    <li>Відстеження статусу звернення в Держреєстрі</li>
-    <li>Швидкий чат-бот для консультацій та нагадувань</li>
-  </ul>
-</section>
+  <!-- тут додаємо кнопку оплати -->
+  <div class="order-button" style="margin-top:10px;">
+    <form method="POST" accept-charset="utf-8" target="_blank"
+          action="https://www.liqpay.ua/api/3/checkout">
+      <input type="hidden" name="data" 
+             value="eyJ2ZXJzaW9uIjozLCJhY3Rpb24iOiJwYXkiLCJhbW91bnQiOiIxOTkiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiTGVnYWxEYWQgQmFzaWMiLCJwdWJsaWNfa2V5Ijoic2FuZGJveF9pMzYyOTUzMDA4NCIsImxhbmd1YWdlIjoidWsiLCJyZXN1bHRfdXJsIjoiaHR0cHM6Ly9sZWdhbGRhZC5naXRodWIuaW8vbGVnYWwtZGFkLWJhc2ljL3RoYW5rLXlvdS5odG1sIn0=" />
+      <input type="hidden" name="signature" value="/r8ttwT03b77PXRz6Y6YKJ8nDNg=" />
+      <button style="
+        border:none;
+        padding:8px 20px;
+        background:#77CC5D;
+        color:#fff;
+        font-weight:600;
+        font-family:sans-serif;
+        border-radius:6px;
+        cursor:pointer;
+        display:inline-flex;
+        align-items:center;
+      ">
+        <!-- замініть src на свій логотип -->
+        <img src="https://legaldad.github.io/legal-dad-basic/logo.svg"
+             alt="LegalDad Logo"
+             style="width:24px; height:24px; margin-right:8px;">
+        Оплатити Basic
+      </button>
+    </form>
+  </div>
+</li>
