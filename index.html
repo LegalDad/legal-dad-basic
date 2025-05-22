@@ -8,62 +8,51 @@
     body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; }
     .container { max-width: 800px; margin: auto; padding: 20px; }
     header { text-align: center; padding: 40px 0; }
-    h1 { margin-bottom: 10px; font-size: 2em; }
-    p.lead { font-size: 1.2em; color: #555; }
-    .btn { display: inline-block; padding: 15px 25px; background: #007bff; color: #fff; text-decoration: none; border-radius: 5px; margin: 20px 0; }
-    section { margin-bottom: 40px; }
-    h2 { margin-bottom: 10px; border-bottom: 2px solid #eee; padding-bottom: 5px; }
+    h1 { margin-bottom:10px; font-size:2em; }
+    p.lead { font-size:1.2em; color:#555; }
+    .btn { display:inline-block; padding:15px 25px; background:#007bff; color:#fff; text-decoration:none; border-radius:5px; margin:20px 0; }
+    section { margin-bottom:40px; }
+    h2 { margin-bottom:10px; border-bottom:2px solid #eee; padding-bottom:5px; }
     ul { list-style: disc inside; }
-    footer { text-align: center; font-size: 0.9em; color: #777; border-top: 1px solid #eee; padding: 20px 0; }
+    footer { text-align:center; padding:20px 0; color:#777; font-size:.9em; }
   </style>
 </head>
 <body>
   <div class="container">
 
-    <!-- Hero-секція -->
     <header>
-      <h1>LegalDad: Готові юридичні шаблони для захисту ваших прав</h1>
-      <p class="lead">Швидко заповніть, надрукуйте й подайте всі необхідні заяви — економте час та нерви.</p>
-      <a href="#order" class="btn">Купити зараз — 199 ₴</a>
+      <h1>LegalDad Basic</h1>
+      <p class="lead">Лендінг для MVP цифрового пакету «LegalDad Basic»</p>
+      <a href="#order" class="btn">Замовити зараз</a>
     </header>
 
-    <!-- Що всередині -->
-    <section>
-      <h2>Що всередині “LegalDad Basic”</h2>
+    <!-- Про нас -->
+    <section id="about">
+      <h2>Про пакет</h2>
+      <p>«LegalDad Basic» — готовий набір професійних шаблонів заяв та інструкцій для звернення до військового комісаріату.</p>
       <ul>
-        <li>6 професійних шаблонів (DOCX + PDF)</li>
-        <li>Інструкція користувача (PDF, 4 стор.)</li>
-        <li>Чек-ліст “Терміни подачі” (PDF, 1 стор.)</li>
-      </ul>
-    </section>
-
-    <!-- Переваги -->
-    <section>
-      <h2>Переваги</h2>
-      <ul>
-        <li>Юридична безпека — всі шаблони з посиланнями на законодавство</li>
-        <li>Швидкість — документи готові до подачі за 10 хвилин</li>
-        <li>Зручність — підтримка по e-mail</li>
-        <li>Доступність — повний комплект за 199 ₴</li>
+        <li>6 DOCX + PDF шаблонів заяв</li>
+        <li>Інструкція користувача (4 стор.)</li>
+        <li>Чек-ліст «Терміни подачі» (1 стор.)</li>
+        <li>Ціна: 199 ₴</li>
       </ul>
     </section>
 
     <!-- Як це працює -->
-    <section>
+    <section id="how-it-works">
       <h2>Як це працює</h2>
       <ol>
-        <li>Оплачуєте 199 ₴ на картку Monobank <strong>4441 1144 1276 2344</strong></li>
-        <li>Надсилаєте чек/скрін на <strong>alexxtrumpp@gmail.com</strong></li>
-        <li>Отримуєте ZIP-архів із документами</li>
+        <li>Оплачуєте 199 ₴ за допомогою кнопки нижче</li>
+        <li>Отримуєте ZIP з документами</li>
         <li>Заповнюєте поля та подаєте заяви до інстанцій</li>
       </ol>
     </section>
 
     <!-- Відгуки -->
-    <section>
+    <section id="testimonials">
       <h2>Відгуки</h2>
       <blockquote>
-        “Дякую, що врятували мій час і нерви! Заяву до ТЦК подано без помилок.”<br>
+        «Дякую, що врятували мій час і нерви! Заяву до ТЦК подано без помилок.»<br>
         — Олександр, Київ
       </blockquote>
     </section>
@@ -71,14 +60,45 @@
     <!-- Замовлення -->
     <section id="order">
       <h2>Замовлення</h2>
-      <!-- Тут вставте код кнопки LiqPay або просто посилання на оплату -->
-      <a href="ВАШЕ_ПОСИЛАННЯ_НА_ОПЛАТУ" class="btn">Купити за 199 ₴</a>
+
+      <form method="POST"
+            accept-charset="utf-8"
+            target="_blank"
+            action="https://www.liqpay.ua/api/3/checkout">
+        <input type="hidden"
+               name="data"
+               value="eyJ2ZXJzaW9uIjozLCJhY3Rpb24iOiJwYXkiLCJhbW91bnQiOiIxOTkiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiTGVnYWxEYWQgQmFzaWMiLCJwdWJsaWNfa2V5Ijoic2FuZGJveF9pMzYyOTUzMDA4NCIsImxhbmd1YWdlIjoidWsiLCJyZXN1bHRfdXJsIjoiaHR0cHM6Ly9sZWdhbGRhZC5naXRodWIuaW8vbGVnYWwtZGFkLWJhc2ljL3RoYW5rLXlvdS5odG1sIn0=" />
+        <input type="hidden"
+               name="signature"
+               value="/r8ttwT03b77PXRz6Y6YKJ8nDNg=" />
+
+        <button type="submit"
+                style="border:none!important;
+                       display:inline-block!important;
+                       text-align:center!important;
+                       padding:5px 24px!important;
+                       color:#fff!important;
+                       box-shadow:0 0 4px rgba(0,0,0,0.12),0 2px 4px rgba(0,0,0,0.12);
+                       font-size:16px!important;
+                       line-height:1.75!important;
+                       font-weight:600!important;
+                       font-family:'Open Sans',sans-serif;
+                       cursor:pointer!important;
+                       border-radius:8px!important;
+                       background:#77CC5D!important;"
+                onmouseover="this.style.opacity='0.5';"
+                onmouseout="this.style.opacity='1';">
+          <img src="https://legaldad.github.io/legal-dad-basic/logo.png"
+               alt="LegalDad Basic"
+               style="vertical-align:middle!important; width:24px; height:auto;"/>
+          <span style="vertical-align:middle!important; margin-left:8px;">Оплатити 199 ₴</span>
+        </button>
+      </form>
+
     </section>
 
-    <!-- Футер -->
     <footer>
-      <p>Питання? Пишіть на <a href="mailto:alexxtrumpp@gmail.com">alexxtrumpp@gmail.com</a> або телефонуйте <strong>+380 96 505 9654</strong></p>
-      <p>ІПН (платника): <strong>2975007390</strong></p>
+      &copy; 2025 LegalDad. Всі права захищені.
     </footer>
 
   </div>
