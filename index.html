@@ -2,182 +2,139 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>LegalDad Basic &amp; Pro &amp; Enterprise</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>LegalDad Basic</title>
   <style>
-    :root {
-      --brand-blue: #002447;
-      --brand-gold: #FFC857;
-      --text-dark: #333;
-      --bg-light: #F9F9F9;
-      --card-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    body { margin:0; font-family: 'Open Sans', sans-serif; color:#333; line-height:1.6; }
+    header { text-align:center; padding:24px; }
+    .logo { height:48px; }
+
+    main { max-width: 960px; margin:0 auto; padding:0 16px; }
+
+    h1, h2, h3 { margin:0 0 16px; font-weight:600; }
+    h1 { font-size:2rem; }
+    h2 { font-size:1.5rem; border-bottom:2px solid #eee; padding-bottom:8px; }
+    p { margin:0 0 16px; }
+
+    /* Pain points */
+    #pain-points { margin:40px 0; }
+    .pain__items { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; }
+    .pain__item { background:#e3f2fd; padding:16px; border-radius:8px; }
+    .pain__item h3 { color:#0D47A1; }
+
+    /* Plans */
+    #plans { margin:40px 0; }
+    .plans__grid { display:flex; gap:20px; flex-wrap:wrap; }
+    .plan-card {
+      background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);
+      padding:24px; flex:1 1 280px; display:flex; flex-direction:column;
     }
-    * { box-sizing: border-box; margin:0; padding:0; }
-    body { font-family: 'Open Sans', sans-serif; color: var(--text-dark); line-height:1.6; }
-    a { color: var(--brand-blue); text-decoration:none; }
-    header { background: var(--brand-blue); color: white; padding:20px 40px; display:flex; align-items:center; justify-content:space-between; }
-    header .logo { font-family:'Montserrat',sans-serif; font-size:1.5rem; font-weight:800; }
-    nav a { margin-left:24px; font-weight:600; }
-    .hero { background: url('https://via.placeholder.com/1600x800/002447/FFC857?text=LegalDad') center/cover no-repeat; color:white; text-align:center; padding:140px 20px; position:relative; }
-    .hero::after {
-      content:''; position:absolute; top:0;left:0;right:0;bottom:0;
-      background: rgba(0,36,71,0.6);
+    .plan-card ul { margin:16px 0; padding-left:20px; }
+    .plan-card .btn {
+      margin-top:auto; padding:10px 20px; border:none; border-radius:4px;
+      font-weight:600; cursor:pointer;
     }
-    .hero-content { position:relative; z-index:1; max-width:700px; margin:0 auto; }
-    .hero h1 { font-family:'Montserrat',sans-serif; font-size:3rem; margin-bottom:16px; }
-    .hero p { font-size:1.2rem; margin-bottom:24px; }
-    .btn { display:inline-block; background: var(--brand-gold); color: var(--brand-blue); font-weight:600;
-           padding:12px 28px; border-radius:6px; transition:opacity .3s; }
-    .btn:hover { opacity:0.8; }
+    .btn--basic      { background:#FFC107; color:#111; }
+    .btn--pro        { background:#FFC107; color:#111; }
+    .btn--enterprise { background:#D32F2F; color:#fff; }
 
-    section { padding:60px 20px; }
-    .container { max-width:1200px; margin:0 auto; }
-    h2 { font-family:'Montserrat',sans-serif; font-size:2rem; margin-bottom:24px; text-align:center; }
+    /* Services */
+    #services { margin:40px 0; }
+    .services-list { list-style:inside disc; padding-left:0; }
+    .services-list li { margin-bottom:8px; }
+    .services-list em { font-style:normal; color:#777; margin-left:4px; }
 
-    /* Пакети */
-    .packages { display:flex; flex-wrap:wrap; gap:24px; justify-content:center; }
-    .package {
-      flex:1 1 300px; background:white; border-radius:8px; box-shadow:var(--card-shadow);
-      overflow:hidden; display:flex; flex-direction:column;
-    }
-    .package-header { background: var(--brand-blue); color:white; padding:24px; }
-    .package-header h3 { margin:0; font-size:1.5rem; }
-    .package-header small { font-size:0.9rem; opacity:0.8; }
-    .package-body { padding:24px; flex:1; }
-    .package-body ul { list-style:disc inside; margin-bottom:24px; }
-    .package-body form { text-align:center; }
-
-    /* Сервіси */
-    .services-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; max-width:900px; margin:0 auto; }
-    .service { background:var(--bg-light); padding:20px; border-radius:6px; text-align:center; box-shadow:var(--card-shadow); }
-    .service h4 { margin-bottom:12px; font-size:1.1rem; }
-
-    /* Відгуки */
-    .testimonials { background: var(--bg-light); }
-    .testimonials-list { display:flex; flex-wrap:wrap; gap:24px; justify-content:center; }
-    .testimonial { flex:1 1 280px; background:white; padding:24px; border-radius:8px; box-shadow:var(--card-shadow); font-style:italic; }
-
-    footer { background:var(--brand-blue); color:white; text-align:center; padding:24px; }
-    footer p { margin:0; }
+    /* Footer email */
+    footer { text-align:center; padding:24px 0; border-top:1px solid #eee; }
+    footer a { color:#1976D2; text-decoration:none; }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header>
-    <div class="logo">LegalDad</div>
-    <nav>
-      <a href="#hero">Головна</a>
-      <a href="#packages">Пакети</a>
-      <a href="#services">Сервіси</a>
-      <a href="#testimonials">Відгуки</a>
-      <a href="#footer">Контакти</a>
-    </nav>
+    <img class="logo" src="assets/logo-legal-dad.svg" alt="LegalDad">
   </header>
 
-  <!-- Hero -->
-  <section id="hero" class="hero">
-    <div class="hero-content">
-      <h1>LegalDad Basic &amp; Pro &amp; Enterprise</h1>
-      <p>Готові рішення для звернення до військових комісаріатів та електронні сервіси для автоматизації процесів.</p>
-      <a href="#packages" class="btn">Обрати пакет</a>
-    </div>
-  </section>
+  <main>
+    <h1>LegalDad Basic</h1>
+    <p>Лендінг для MVP цифрового пакету «LegalDad Basic»</p>
 
-  <!-- Наші пакети -->
-  <section id="packages" class="container">
-    <h2>Наші пакети</h2>
-    <div class="packages">
-
-      <!-- Basic -->
-      <div class="package">
-        <div class="package-header">
-          <h3>Basic <small>(199 ₴)</small></h3>
+    <!-- Pain points -->
+    <section id="pain-points">
+      <h2>Ваші проблеми і наші рішення</h2>
+      <div class="pain__items">
+        <div class="pain__item">
+          <h3>Блокування зв’язку</h3>
+          <p>Не можете зв’язатися з дитиною через блоковані чати? Basic має готову заяву для оскарження.</p>
         </div>
-        <div class="package-body">
+        <div class="pain__item">
+          <h3>Неправильні повістки</h3>
+          <p>Отримали некоректну повістку? Basic відкриває доступ до шаблону заяви на скасування.</p>
+        </div>
+        <div class="pain__item">
+          <h3>Страх пропустити термін</h3>
+          <p>Переживаєте, що забудете подати заяву? Basic включає чек-ліст із термінами подачі.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plans -->
+    <section id="plans">
+      <h2>Наші пакети</h2>
+      <div class="plans__grid">
+
+        <div class="plan-card">
+          <h3>Basic <small>(199 ₴)</small></h3>
           <ul>
             <li>6 шаблонів заяв (DOCX + PDF)</li>
             <li>Інструкція користувача (4 стор.)</li>
             <li>Чек-ліст “Терміни подачі” (1 стор.)</li>
           </ul>
-          <form method="POST" action="https://www.liqpay.ua/api/3/checkout" accept-charset="utf-8" target="_blank">
-            <input type="hidden" name="data" value="…YOUR_DATA_BASIC…"/>
-            <input type="hidden" name="signature" value="…YOUR_SIG_BASIC…"/>
-            <button class="btn">Оплатити Basic</button>
-          </form>
+          <button class="btn btn--basic">Оплатити Basic</button>
         </div>
-      </div>
 
-      <!-- Pro -->
-      <div class="package">
-        <div class="package-header">
+        <div class="plan-card">
           <h3>Pro <small>(499 ₴)</small></h3>
-        </div>
-        <div class="package-body">
           <ul>
             <li>Усе з пакету Basic</li>
             <li>Автозаповнення заяв через веб-форму</li>
             <li>Перевірка статусу відправки</li>
-            <li>Телеграм-бот для нагадувань</li>
+            <li>Telegram-бот для нагадувань <em>(скоро)</em></li>
           </ul>
-          <form method="POST" action="https://www.liqpay.ua/api/3/checkout" accept-charset="utf-8" target="_blank">
-            <input type="hidden" name="data" value="…YOUR_DATA_PRO…"/>
-            <input type="hidden" name="signature" value="…YOUR_SIG_PRO…"/>
-            <button class="btn" style="background:#FFC857; color:var(--brand-blue);">Оплатити Pro</button>
-          </form>
+          <button class="btn btn--pro">Оплатити Pro</button>
         </div>
-      </div>
 
-      <!-- Enterprise -->
-      <div class="package">
-        <div class="package-header">
+        <div class="plan-card">
           <h3>Enterprise <small>(999 ₴)</small></h3>
-        </div>
-        <div class="package-body">
           <ul>
             <li>Усе з пакету Pro</li>
             <li>Консультація юриста по Zoom</li>
             <li>Підготовка індивідуальних документів</li>
             <li>API-інтеграція для масових заяв</li>
           </ul>
-          <form method="POST" action="https://www.liqpay.ua/api/3/checkout" accept-charset="utf-8" target="_blank">
-            <input type="hidden" name="data" value="…YOUR_DATA_ENT…"/>
-            <input type="hidden" name="signature" value="…YOUR_SIG_ENT…"/>
-            <button class="btn" style="background:#D7263D;">Оплатити Enterprise</button>
-          </form>
+          <button class="btn btn--enterprise">Оплатити Enterprise</button>
         </div>
+
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- Services -->
+    <section id="services">
+      <h2>Електронні сервіси</h2>
+      <ul class="services-list">
+        <li>Генератор заяв у браузері (DOCX + PDF)</li>
+        <li>Онлайн-оплата (LiqPay, Monobank Pay)</li>
+        <li>Подача заяв через API / веб-форми</li>
+        <li>Відстеження статусу звернення в Держреєстрі</li>
+        <li>Чат-бот для консультацій та нагадувань <em>(скоро)</em></li>
+      </ul>
+    </section>
+  </main>
 
-  <!-- Електронні сервіси -->
-  <section id="services">
-    <h2>Електронні сервіси</h2>
-    <div class="services-list container">
-      <div class="service"><h4>Генератор заяв у браузері</h4><p>(DOCX + PDF)</p></div>
-      <div class="service"><h4>Онлайн-оплата</h4><p>(LiqPay, Monobank Pay)</p></div>
-      <div class="service"><h4>Подача заяв</h4><p>через API / веб-форми</p></div>
-      <div class="service"><h4>Трекінг статусу звернень</h4><p>в Держреєстрі</p></div>
-      <div class="service"><h4>Чат-бот</h4><p>для консультацій та нагадувань</p></div>
-    </div>
-  </section>
-
-  <!-- Відгуки -->
-  <section id="testimonials" class="testimonials">
-    <h2>Відгуки наших клієнтів</h2>
-    <div class="testimonials-list container">
-      <div class="testimonial">“Дякую, що врятували мій час і нерви! Заяву до ТЦК подано без помилок.”<br><strong>— Олександр, Київ</strong></div>
-      <div class="testimonial">“Pro-пакет спростив подачу одразу трьох заяв, Telegram-бот тримав у курсі.”<br><strong>— Марія, Львів</strong></div>
-      <div class="testimonial">“Enterprise підтримка по Zoom — це рівень! Рекомендую.”<br><strong>— Іван, Харків</strong></div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer id="footer">
-    <p>© 2025 LegalDad. Всі права захищені.</p>
+  <footer>
+    <p>Пишіть нам: <a href="mailto:hello@legaldad.io">hello@legaldad.io</a></p>
   </footer>
 
 </body>
 </html>
+
