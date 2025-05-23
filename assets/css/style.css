@@ -1,0 +1,85 @@
+/* Базові налаштування */
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+.section-title {
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.logo {
+  height: 40px;
+}
+
+/* HERO */
+.hero {
+  background: url('../img/hero-bg.jpg') center/cover no-repeat;
+  min-height: 60vh;
+  position: relative;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Картки проблем */
+.card-title {
+  color: #004085;
+  font-weight: 600;
+}
+
+/* Пакети */
+.card-header {
+  font-size: 1.25rem;
+}
+.card {
+  border: none;
+  border-radius: 8px;
+}
+.card-body ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Кнопки */
+.btn-primary {
+  background-color: #004085;
+  border-color: #003567;
+}
+.btn-primary:hover {
+  background-color: #003567;
+}
+.btn-warning {
+  background-color: #FFC107;
+  border-color: #e0a800;
+}
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #c82333;
+}
+
+/* Сервіси */
+.service-card {
+  background: #fff;
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  height: 100%;
+}
+
+/* Адаптив та відступи */
+@media (max-width: 576px) {
+  .hero { min-height: 40vh; }
+  .card-header, .section-title { text-align: center; }
+  .btn { width: 100%; }
+}
