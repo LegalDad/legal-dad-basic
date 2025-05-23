@@ -2,123 +2,108 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>LegalDad Basic &amp; Pro &amp; Enterprise</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LegalDad — Татова допомога</title>
+  <link rel="stylesheet" href="ресурси/css/style.css">
 </head>
 <body>
 
   <!-- HERO -->
   <section class="hero">
     <div class="wrapper">
-      <img src="assets/img/logo.png" alt="LegalDad" class="logo">
-      <h1>LegalDad Basic &amp; Pro &amp; Enterprise</h1>
+      <img src="активи/images/logotin.png" alt="LegalDad логотип" class="logo">
+      <h1>LegalDad — Татова допомога</h1>
       <p class="subhead">
-        Готові рішення для звернення до військових комісаріатів та комплексна автоматизація процесів.
+        Готові рішення для ваших типових проблем з військкоматом та автоматизація процесів.
       </p>
       <a href="#packages" class="btn btn-primary">Обрати пакет</a>
     </div>
   </section>
 
-  <!-- ПРОБЛЕМИ -->
-  <section class="problems wrapper" id="problems">
-    <h2>Ваші проблеми і наші рішення</h2>
-    <div class="problems-grid">
-      <div class="card">
-        <h3>Блокування зв’язку</h3>
-        <p>Не можете зв’язатися з дитиною через заблоковані чати? Basic має готову заяву для оскарження.</p>
-      </div>
-      <div class="card">
-        <h3>Неправильні повістки</h3>
-        <p>Отримали некоректну повістку? Pro відкриває доступ до шаблону заяви на скасування.</p>
-      </div>
-      <div class="card">
-        <h3>Страх пропустити термін</h3>
-        <p>Переживаєте, що пропустите дату подачі? Basic включає чек-ліст із термінами.</p>
-      </div>
-      <div class="card">
-        <h3>Незаконний вивіз дитини</h3>
-        <p>Забрали дитину без вашої згоди? Enterprise пропонує перевірене рішення та консультацію.</p>
+  <!-- PROBLEMS -->
+  <section id="problems" class="problems">
+    <div class="wrapper">
+      <h2>Ваші проблеми &amp; наші рішення</h2>
+      <div class="problems-grid">
+        <div class="card">
+          <h3>Блокування зв’язку</h3>
+          <p>Не можете зв’язатися з дитиною через заблоковані чати? <strong>Basic</strong> дає готовий шаблон заяви на оскарження.</p>
+        </div>
+        <div class="card">
+          <h3>Неправильні повістки</h3>
+          <p>Отримали некоректну повістку? <strong>Pro</strong> відкриває доступ до шаблону заяви на скасування та перевірку статусу.</p>
+        </div>
+        <div class="card">
+          <h3>Страх пропустити термін</h3>
+          <p>Переживаєте, що забудете подати заяву? <strong>Basic</strong> включає чек-ліст із усіма термінами подачі.</p>
+        </div>
+        <div class="card">
+          <h3>Незаконний вивіз дитини</h3>
+          <p>Забрали дитину за кордон без вашої згоди? <strong>Enterprise</strong> пропонує індивідуальну консультацію та перевірене рішення.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ПАКЕТИ -->
-  <section class="packages wrapper" id="packages">
-    <h2>Наші пакети</h2>
-    <div class="packages-grid">
-
-      <div class="plan plan-basic">
-        <h3>Basic <span>(199 ₴)</span></h3>
-        <ul>
-          <li>6 шаблонів заяв (DOCX + PDF)</li>
-          <li>Інструкція користувача (4 стор.)</li>
-          <li>Чек-ліст “Терміни подачі” (1 стор.)</li>
-          <li>Онлайн-оплата та ZIP з документами</li>
-        </ul>
-        <a href="#order-basic" class="btn btn-secondary">Оплатити Basic</a>
+  <!-- PACKAGES -->
+  <section id="packages" class="packages">
+    <div class="wrapper">
+      <h2>Наші пакети</h2>
+      <div class="packages-grid">
+        <!-- Basic -->
+        <div class="card">
+          <h3>Basic <span>(199 ₴)</span></h3>
+          <ul>
+            <li>6 шаблонів заяв (DOCX + PDF)</li>
+            <li>Інструкція користувача (4 стор.)</li>
+            <li>Чек-ліст «Терміни подачі» (1 стор.)</li>
+          </ul>
+          <a href="#order-basic" class="btn btn-primary">Оплатити Basic</a>
+        </div>
+        <!-- Pro -->
+        <div class="card">
+          <h3>Pro <span>(499 ₴)</span></h3>
+          <ul>
+            <li>Все з пакета Basic</li>
+            <li>Автозаповнення заяв через веб-форму</li>
+            <li>Перевірка статусу відправки</li>
+            <li>Telegram-бот для нагадувань</li>
+          </ul>
+          <a href="#order-pro" class="btn btn-primary">Оплатити Pro</a>
+        </div>
+        <!-- Enterprise -->
+        <div class="card">
+          <h3>Enterprise <span>(999 ₴)</span></h3>
+          <ul>
+            <li>Все з пакета Pro</li>
+            <li>Консультація юриста по Zoom</li>
+            <li>Підготовка індивідуальних документів</li>
+            <li>API-інтеграція для масових заяв</li>
+          </ul>
+          <a href="#order-enterprise" class="btn btn-primary">Оплатити Enterprise</a>
+        </div>
       </div>
-
-      <div class="plan plan-pro">
-        <h3>Pro <span>(499 ₴)</span></h3>
-        <ul>
-          <li>Усе з пакету Basic</li>
-          <li>Автозаповнення заяв через веб-форму</li>
-          <li>Перевірка статусу відправки</li>
-          <li>Telegram-бот для нагадувань (скоро)</li>
-        </ul>
-        <a href="#order-pro" class="btn btn-secondary">Оплатити Pro</a>
-      </div>
-
-      <div class="plan plan-enterprise">
-        <h3>Enterprise <span>(999 ₴)</span></h3>
-        <ul>
-          <li>Усе з пакету Pro</li>
-          <li>Консультація юриста по Zoom</li>
-          <li>Підготовка індивідуальних документів</li>
-          <li>API-інтеграція для масових заяв</li>
-        </ul>
-        <a href="#order-enterprise" class="btn btn-tertiary">Оплатити Enterprise</a>
-      </div>
-
     </div>
   </section>
 
-  <!-- ЕЛЕКТРОННІ СЕРВІСИ -->
-  <section class="services wrapper">
-    <h2>Електронні сервіси</h2>
-    <ul class="services-list">
-      <li>Генератор заяв у браузері (DOCX + PDF)</li>
-      <li>Онлайн-оплата (LiqPay, Monobank Pay)</li>
-      <li>Подача заяв через API / веб-форми</li>
-      <li>Відстеження статусу звернень в Держреєстрі</li>
-      <li>Чат-бот для консультацій та нагадувань (скоро)</li>
-    </ul>
-  </section>
-
-  <!-- ВІДГУКИ -->
-  <section class="testimonials wrapper">
-    <h2>Відгуки наших клієнтів</h2>
-    <div class="testimonials-grid">
-      <blockquote>
-        “Дякую, що врятували мій час і нерви! Заяву до ТЦК подано без помилок.”
-        <em>— Олександр, Київ</em>
-      </blockquote>
-      <blockquote>
-        “Pro-пакет спростив подачу одразу трьох заяв, Telegram-бот тримав у курсі.”
-        <em>— Марія, Львів</em>
-      </blockquote>
-      <blockquote>
-        “Enterprise підтримка по Zoom — це рівень! Рекомендую.”
-        <em>— Іван, Харків</em>
-      </blockquote>
+  <!-- ELECTRONIC SERVICES -->
+  <section class="services">
+    <div class="wrapper">
+      <h2>Електронні сервіси</h2>
+      <div class="services-grid">
+        <div class="card">Генератор заяв у браузері (DOCX + PDF)</div>
+        <div class="card">Онлайн-оплата (LiqPay, Monobank Pay)</div>
+        <div class="card">Подача заяв через API / веб-форми</div>
+        <div class="card">Трекінг статусу звернень в Держреєстрі</div>
+        <div class="card">Чат-бот для консультацій та нагадувань</div>
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>© 2025 LegalDad. Всі права захищені.</p>
     <p>Пишіть нам: <a href="mailto:alexxtrumpp@gmail.com">alexxtrumpp@gmail.com</a></p>
+    <p>© 2025 LegalDad. Всі права захищені.</p>
   </footer>
 
 </body>
