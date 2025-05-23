@@ -3,177 +3,133 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>LegalDad — Ваш юридичний захист</title>
-
-  <!-- Bootstrap 5 -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    crossorigin="anonymous"
-  />
-  <!-- Кастомні стилі -->
-  <link rel="stylesheet" href="assets/css/style.css" />
-
+  <title>LegalDad Basic & Pro & Enterprise</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- НАВІГАЦІЯ -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="assets/img/logo.png" alt="LegalDad" class="logo me-2" />
-        <span>LegalDad</span>
-      </a>
-    </div>
-  </nav>
-
-  <!-- ГОЛОВНИЙ БЛОК -->
-  <header class="hero text-center text-white d-flex align-items-center">
-    <div class="container">
-      <h1 class="display-4 fw-bold">LegalDad Basic &amp; Pro &amp; Enterprise</h1>
-      <p class="lead my-4">Готові рішення для ваших юридичних задач ― від письмових заяв до повної автоматизації процесів</p>
-      <a href="#packages" class="btn btn-lg btn-warning">Обрати пакет</a>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <img src="assets/img/logo.png" alt="LegalDad" class="logo">
+      <h1>LegalDad Basic & Pro & Enterprise</h1>
+      <p class="subhead">Готові рішення для ваших проблем із військовими комісаріатами та повною автоматизацією процесів.</p>
+      <a href="#problems" class="btn btn-primary">Обрати пакет</a>
     </div>
   </header>
 
-  <!-- ПРО ПРОБЛЕМИ -->
-  <section class="py-5 bg-light">
-    <div class="container">
-      <h2 class="section-title text-center mb-4">Ваші проблеми &amp; Наші рішення</h2>
-      <div class="row gx-4 gy-4">
-        <div class="col-md-4">
-          <div class="card shadow-sm h-100">
-            <div class="card-body">
-              <h5 class="card-title">Блокування зв’язку</h5>
-              <p class="card-text">Не можете зв’язатися з дитиною через блоковані чати? Basic має шаблон заяви на оскарження.</p>
-            </div>
-          </div>
+  <!-- PROBLEMS & SOLUTIONS -->
+  <section id="problems" class="problems">
+    <div class="wrapper">
+      <h2>Ваші проблеми і наші рішення</h2>
+      <div class="grid problems-grid">
+
+        <div class="card">
+          <h3>Блокування зв’язку</h3>
+          <p>Не можете зв’язатися з дитиною через заблоковані чати?<br><strong>Basic</strong> має готову заяву для оскарження.</p>
         </div>
-        <div class="col-md-4">
-          <div class="card shadow-sm h-100">
-            <div class="card-body">
-              <h5 class="card-title">Неправильні повістки</h5>
-              <p class="card-text">Отримали некоректну повістку? Basic відкриває доступ до заяви на скасування.</p>
-            </div>
-          </div>
+
+        <div class="card">
+          <h3>Неправильні повістки</h3>
+          <p>Отримали некоректну повістку?<br><strong>Pro</strong> відкриває доступ до шаблону заяви на скасування.</p>
         </div>
-        <div class="col-md-4">
-          <div class="card shadow-sm h-100">
-            <div class="card-body">
-              <h5 class="card-title">Страх пропустити термін</h5>
-              <p class="card-text">Переживаєте, що забудете подати заяву? Basic включає чек-ліст із термінами.</p>
-            </div>
-          </div>
+
+        <div class="card">
+          <h3>Страх пропустити термін</h3>
+          <p>Переживаєте, що забудете подати заяву?<br><strong>Basic</strong> включає чек-ліст із термінами подачі.</p>
         </div>
+
+        <div class="card">
+          <h3>Незаконний вивіз дитини</h3>
+          <p>Забрали дитину без вашої згоди?<br><strong>Enterprise</strong> пропонує перевірене рішення та консультацію.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ПАКЕТИ -->
-  <section id="packages" class="py-5">
-    <div class="container">
-      <h2 class="section-title text-center mb-5">Наші пакети</h2>
-      <div class="row gx-4 gy-4">
-        <!-- Basic -->
-        <div class="col-md-4">
-          <div class="card h-100 text-center shadow-sm">
-            <div class="card-header bg-primary text-white">
-              <h4 class="card-title mb-0">Basic <small>(199 ₴)</small></h4>
-            </div>
-            <div class="card-body">
-              <ul class="list-unstyled mb-4">
-                <li>6 шаблонів заяв (DOCX + PDF)</li>
-                <li>Інструкція користувача (4 стор.)</li>
-                <li>Чек-ліст «Терміни подачі» (1 стор.)</li>
-              </ul>
-              <!-- LiqPay кнопка -->
-              <form method="POST" action="https://www.liqpay.ua/api/3/checkout" class="d-inline-block">
-                <input type="hidden" name="data" value="YOUR_DATA_BASIC" />
-                <input type="hidden" name="signature" value="YOUR_SIG_BASIC" />
-                <button class="btn btn-lg btn-primary w-100">Оплатити Basic</button>
-              </form>
-            </div>
-          </div>
+  <!-- PACKAGES -->
+  <section id="packages" class="packages">
+    <div class="wrapper">
+      <h2>Наші пакети</h2>
+      <div class="grid packages-grid">
+
+        <div class="plan plan-basic">
+          <h3>Basic <span>(199 ₴)</span></h3>
+          <ul>
+            <li>6 шаблонів заяв (DOCX + PDF)</li>
+            <li>Інструкція користувача (4 стор.)</li>
+            <li>Чек-ліст «Терміни подачі» (1 стор.)</li>
+          </ul>
+          <a href="#order-basic" class="btn btn-secondary">Оплатити Basic</a>
         </div>
-        <!-- Pro -->
-        <div class="col-md-4">
-          <div class="card h-100 text-center shadow-sm">
-            <div class="card-header bg-warning text-dark">
-              <h4 class="card-title mb-0">Pro <small>(499 ₴)</small></h4>
-            </div>
-            <div class="card-body">
-              <ul class="list-unstyled mb-4">
-                <li>Усе з пакету Basic</li>
-                <li>Автозаповнення заяв через веб-форму</li>
-                <li>Перевірка статусу відправки</li>
-                <li>Telegram-бот для нагадувань</li>
-              </ul>
-              <form method="POST" action="https://www.liqpay.ua/api/3/checkout" class="d-inline-block">
-                <input type="hidden" name="data" value="YOUR_DATA_PRO" />
-                <input type="hidden" name="signature" value="YOUR_SIG_PRO" />
-                <button class="btn btn-lg btn-warning w-100">Оплатити Pro</button>
-              </form>
-            </div>
-          </div>
+
+        <div class="plan plan-pro">
+          <h3>Pro <span>(499 ₴)</span></h3>
+          <ul>
+            <li>Усе з пакету Basic</li>
+            <li>Автозаповнення заяв через веб-форму</li>
+            <li>Перевірка статусу відправки</li>
+            <li>Telegram-бот для нагадувань <em>(скоро)</em></li>
+          </ul>
+          <a href="#order-pro" class="btn btn-secondary">Оплатити Pro</a>
         </div>
-        <!-- Enterprise -->
-        <div class="col-md-4">
-          <div class="card h-100 text-center shadow-sm">
-            <div class="card-header bg-danger text-white">
-              <h4 class="card-title mb-0">Enterprise <small>(999 ₴)</small></h4>
-            </div>
-            <div class="card-body">
-              <ul class="list-unstyled mb-4">
-                <li>Усе з пакету Pro</li>
-                <li>Консультація юриста по Zoom</li>
-                <li>Підготовка індивідуальних документів</li>
-                <li>API-інтеграція для масових заяв</li>
-              </ul>
-              <form method="POST" action="https://www.liqpay.ua/api/3/checkout" class="d-inline-block">
-                <input type="hidden" name="data" value="YOUR_DATA_ENTERPRISE" />
-                <input type="hidden" name="signature" value="YOUR_SIG_ENTERPRISE" />
-                <button class="btn btn-lg btn-danger w-100">Оплатити Enterprise</button>
-              </form>
-            </div>
-          </div>
+
+        <div class="plan plan-enterprise">
+          <h3>Enterprise <span>(999 ₴)</span></h3>
+          <ul>
+            <li>Усе з пакету Pro</li>
+            <li>Консультація юриста по Zoom</li>
+            <li>Підготовка індивідуальних документів</li>
+            <li>API-інтеграція для масових заяв</li>
+          </ul>
+          <a href="#order-enterprise" class="btn btn-tertiary">Оплатити Enterprise</a>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ЕЛЕКТРОННІ СЕРВІСИ -->
-  <section class="py-5 bg-light">
-    <div class="container">
-      <h2 class="section-title text-center mb-4">Електронні сервіси</h2>
-      <div class="row gx-4 gy-3 justify-content-center">
-        <div class="col-sm-6 col-md-4">
-          <div class="service-card">Генератор заяв у браузері (DOCX + PDF)</div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="service-card">Онлайн-оплата (LiqPay, Monobank Pay)</div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="service-card">Подача заяв через API / веб-форми</div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="service-card">Трекінг статусу звернень в Держреєстрі</div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-          <div class="service-card">Чат-бот для консультацій та нагадувань (скоро)</div>
-        </div>
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <div class="wrapper">
+      <h2>Електронні сервіси</h2>
+      <ul class="services-list">
+        <li>Генератор заяв у браузері (DOCX + PDF)</li>
+        <li>Онлайн-оплата (LiqPay, Monobank Pay)</li>
+        <li>Подача заяв через API / веб-форми</li>
+        <li>Трекінг статусу звернень в Держреєстрі</li>
+        <li>Чат-бот для консультацій та нагадувань <em>(скоро)</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="testimonials">
+    <div class="wrapper">
+      <h2>Відгуки наших клієнтів</h2>
+      <div class="grid testimonials-grid">
+        <blockquote>
+          «Дякую, що врятували мій час і нерви! Заяву до ТЦК подано без помилок.»<br><em>— Олександр, Київ</em>
+        </blockquote>
+        <blockquote>
+          «Pro-пакет спростив подачу відразу трьох заяв, Telegram-бот тримав у курсі.»<br><em>— Марія, Львів</em>
+        </blockquote>
+        <blockquote>
+          «Enterprise підтримка по Zoom — це рівень! Рекомендую.»<br><em>— Іван, Харків</em>
+        </blockquote>
       </div>
     </div>
   </section>
 
-  <!-- ФУТЕР -->
-  <footer class="py-4 bg-dark text-center text-white">
-    <div class="container">
-      <p class="mb-1">&copy; 2025 LegalDad. Всі права захищені.</p>
-      <p class="mb-0">Пишіть нам: <a href="mailto:hello@legaldad.io" class="link-light">hello@legaldad.io</a></p>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrapper">
+      <p>© 2025 LegalDad. Всі права захищені.</p>
+      <p>Пишіть нам: <a href="mailto:alexxtrumpp@gmail.com">alexxtrumpp@gmail.com</a></p>
     </div>
   </footer>
 
-  <!-- Bootstrap JS (не обов’язково, якщо не використовуєте динаміку) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
