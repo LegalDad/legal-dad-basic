@@ -1,32 +1,45 @@
-/* === RESET & BASE === */
-* { box-sizing: border-box; margin:0; padding:0; }
-body { font-family: 'Open Sans', sans-serif; color:#333; line-height:1.6; background:#f9f9f9; }
+/* assets/css/style.css */
+
+/* RESET & BASE */
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:'Open Sans',sans-serif; color:#333; line-height:1.6; background:#f9f9f9; }
 .wrapper { width:90%; max-width:960px; margin:0 auto; }
 
-/* === HERO === */
+/* HERO */
 .hero {
-  background: url('../img/hero-bg.jpg') center/cover no-repeat;
+  background:url('../img/hero-bg.jpg') center/cover no-repeat;
   color:#fff; text-align:center; padding:100px 0;
 }
 .hero .logo { height:64px; margin-bottom:16px; }
 .hero h1 { font-size:2.5rem; margin-bottom:12px; }
 .hero .subhead { font-size:1.1rem; opacity:0.85; margin-bottom:24px; }
-.btn { display:inline-block; text-decoration:none; font-weight:600; border-radius:4px; transition:opacity .3s; }
+.btn { display:inline-block; text-decoration:none; font-weight:600; border-radius:4px; transition:opacity .3s; cursor:pointer; }
 .btn-primary { background:#FFC43D; color:#222; padding:12px 28px; }
-.btn-primary:hover { opacity:0.8; }
+.btn-primary:hover { opacity:.8; }
 
-/* === PROBLEMS === */
+/* PROBLEMS */
 .problems { background:#eef2f5; padding:60px 0; }
 .problems h2 { text-align:center; margin-bottom:40px; font-size:1.8rem; }
-.problems-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:24px; }
-.problems .card { background:#fff; border-radius:6px; box-shadow:0 4px 8px rgba(0,0,0,0.05); padding:20px; }
+.problems-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:24px;
+}
+.problems .card {
+  background:#fff; border-radius:6px; box-shadow:0 4px 8px rgba(0,0,0,0.05);
+  padding:20px;
+}
 .problems .card h3 { margin-bottom:12px; color:#0D47A1; }
 .problems .card p { font-size:0.95rem; }
 
-/* === PACKAGES === */
+/* PACKAGES */
 .packages { padding:60px 0; }
 .packages h2 { text-align:center; margin-bottom:40px; font-size:1.8rem; }
-.packages-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:24px; }
+.packages-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:24px;
+}
 .plan {
   background:#fff; border-radius:6px; box-shadow:0 4px 8px rgba(0,0,0,0.05);
   padding:24px; display:flex; flex-direction:column; justify-content:space-between;
@@ -41,12 +54,13 @@ body { font-family: 'Open Sans', sans-serif; color:#333; line-height:1.6; backgr
 }
 .plan-enterprise .btn-tertiary,
 .btn-tertiary {
-  background:#D32F2F; color:#fff; padding:10px; text-align:center;
+  background:#D32F2F; color:#fff; text-align:center;
+  padding:10px;
 }
 .btn-secondary:hover,
-.btn-tertiary:hover { opacity:0.85; }
+.btn-tertiary:hover { opacity:.85; }
 
-/* === SERVICES === */
+/* SERVICES */
 .services { background:#eef2f5; padding:60px 0; }
 .services h2 { text-align:center; margin-bottom:24px; font-size:1.6rem; }
 .services-list {
@@ -56,11 +70,13 @@ body { font-family: 'Open Sans', sans-serif; color:#333; line-height:1.6; backgr
 }
 .services-list li { flex:1 1 200px; }
 
-/* === TESTIMONIALS === */
+/* TESTIMONIALS */
 .testimonials { padding:60px 0; }
 .testimonials h2 { text-align:center; margin-bottom:40px; font-size:1.8rem; }
 .testimonials-grid {
-  display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:24px;
 }
 .testimonials blockquote {
   background:#fff; padding:20px; border-radius:6px;
@@ -68,13 +84,13 @@ body { font-family: 'Open Sans', sans-serif; color:#333; line-height:1.6; backgr
 }
 .testimonials em { display:block; margin-top:12px; text-align:right; font-style:normal; }
 
-/* === FOOTER === */
+/* FOOTER */
 .footer { background:#0D47A1; color:#eee; padding:20px 0; text-align:center; }
 .footer a { color:#FFC43D; text-decoration:none; }
-.footer a:hover { opacity:0.8; }
+.footer a:hover { opacity:.8; }
 
-/* === RESPONSIVE === */
-@media (max-width: 576px) {
+/* RESPONSIVE */
+@media (max-width:576px) {
   .hero { padding:60px 0; }
   .hero h1 { font-size:2rem; }
 }
