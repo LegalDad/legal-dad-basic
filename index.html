@@ -2,27 +2,38 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>LegalDad – Татова допомога</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LegalDad — Татова допомога</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-  <!-- HEADER / HERO -->
-  <header class="hero">
-    <div class="wrapper">
-      <img src="assets/img/logo.png" alt="LegalDad Logo" class="logo">
-      <h1>LegalDad — Татова допомога</h1>
-      <p class="subhead">Готові рішення для типових проблем з військкоматом та автоматизації процесів</p>
-      <a href="#packages" class="btn btn-primary">Обрати пакет</a>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container">
+      <img src="assets/img/logo.png" alt="LegalDad Logo" class="navbar__logo">
+      <nav class="navbar__menu">
+        <a href="#packages">Пакети</a>
+        <a href="#problems">Проблеми</a>
+        <a href="#services">Сервіси</a>
+      </nav>
+      <a href="mailto:alexxtrumpp@gmail.com" class="btn btn--outline">Пишіть нам</a>
     </div>
   </header>
 
-  <!-- ПРОБЛЕМИ -->
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <h1 class="hero__title">LegalDad — Татова допомога</h1>
+      <p class="hero__subtitle">Готові рішення для типових проблем із військкоматом та комплексна автоматизація процесів.</p>
+      <a href="#packages" class="btn btn--primary">Обрати пакет</a>
+    </div>
+  </section>
+
+  <!-- PROBLEMS -->
   <section id="problems" class="problems">
-    <div class="wrapper">
-      <h2>Ваші проблеми &amp; наші рішення</h2>
-      <div class="problems-grid">
+    <div class="container">
+      <h2 class="section__title">Ваші проблеми &amp; наші рішення</h2>
+      <div class="cards">
         <div class="card">
           <h3>Блокування зв’язку</h3>
           <p>Не можете зв’язатися з дитиною через заблоковані чати? <strong>Basic</strong> дає готовий шаблон заяви на оскарження.</p>
@@ -43,90 +54,94 @@
     </div>
   </section>
 
-  <!-- ПАКЕТИ -->
+  <!-- PACKAGES -->
   <section id="packages" class="packages">
-    <div class="wrapper">
-      <h2>Наші пакети</h2>
-      <div class="packages-grid">
-        <div class="card">
-          <h3>Basic <span>(199 ₴)</span></h3>
-          <ul>
+    <div class="container">
+      <h2 class="section__title">Наші пакети</h2>
+      <div class="cards cards--horizontal">
+        <div class="card card--package">
+          <header class="card__header">Basic (199 ₴)</header>
+          <ul class="card__list">
             <li>6 шаблонів заяв (DOCX + PDF)</li>
             <li>Інструкція користувача (4 стор.)</li>
             <li>Чек-ліст “Терміни подачі” (1 стор.)</li>
             <li>Онлайн-оплата та ZIP з документами</li>
           </ul>
-          <a href="#" class="btn btn-primary">Оплатити Basic</a>
+          <a href="#" class="btn btn--package btn--orange">Оплатити Basic</a>
         </div>
-        <div class="card">
-          <h3>Pro <span>(499 ₴)</span></h3>
-          <ul>
+        <div class="card card--package">
+          <header class="card__header">Pro (499 ₴)</header>
+          <ul class="card__list">
             <li>Усе з пакету Basic</li>
             <li>Автозаповнення заяв через веб-форму</li>
             <li>Перевірка статусу відправки</li>
             <li>Telegram-бот для нагадувань</li>
           </ul>
-          <a href="#" class="btn btn-primary">Оплатити Pro</a>
+          <a href="#" class="btn btn--package btn--orange">Оплатити Pro</a>
         </div>
-        <div class="card">
-          <h3>Enterprise <span>(999 ₴)</span></h3>
-          <ul>
+        <div class="card card--package">
+          <header class="card__header">Enterprise (999 ₴)</header>
+          <ul class="card__list">
             <li>Усе з пакету Pro</li>
             <li>Консультація юриста по Zoom</li>
             <li>Підготовка індивідуальних документів</li>
             <li>API-інтеграція для масових заяв</li>
           </ul>
-          <a href="#" class="btn btn-secondary">Оплатити Enterprise</a>
+          <a href="#" class="btn btn--package btn--red">Оплатити Enterprise</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- СЕРВІСИ -->
+  <!-- SERVICES -->
   <section id="services" class="services">
-    <div class="wrapper">
-      <h2>Електронні сервіси</h2>
-      <div class="services-grid">
-        <div class="card">Генератор заяв у браузері<br>(DOCX + PDF)</div>
-        <div class="card">Онлайн-оплата<br>(LiqPay, Monobank Pay)</div>
-        <div class="card">Подача заяв через API / веб-форми</div>
-        <div class="card">Трекінг статусу звернень в Держреєстрі</div>
-        <div class="card">Чат-бот для консультацій та нагадувань</div>
+    <div class="container">
+      <h2 class="section__title">Електронні сервіси</h2>
+      <div class="cards cards--horizontal cards--small">
+        <div class="card">
+          <h4>Генератор заяв у браузері</h4>
+          <p>(DOCX + PDF)</p>
+        </div>
+        <div class="card">
+          <h4>Онлайн-оплата</h4>
+          <p>(LiqPay, Monobank Pay)</p>
+        </div>
+        <div class="card">
+          <h4>Подача заяв через API / веб-форми</h4>
+        </div>
+        <div class="card">
+          <h4>Трекінг статусу звернень</h4>
+          <p>в Держреєстрі</p>
+        </div>
+        <div class="card">
+          <h4>Чат-бот для консультацій та нагадувань</h4>
+          <p>(скоро)</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ВІДГУКИ -->
-  <section id="testimonials" class="testimonials">
-    <div class="wrapper">
-      <h2>Відгуки наших клієнтів</h2>
-      <div class="testimonials-grid">
-        <blockquote>
-          “Дякую, що врятували мій час і нерви! Заяву до ТЦК подано без помилок.”<br>
-          <cite>— Олександр, Київ</cite>
-        </blockquote>
-        <blockquote>
-          “Pro-пакет спростив подачу одразу трьох заяв, Telegram-бот тримав у курсі.”<br>
-          <cite>— Марія, Львів</cite>
-        </blockquote>
-        <blockquote>
-          “Enterprise підтримка по Zoom — це рівень! Рекомендую.”<br>
-          <cite>— Іван, Харків</cite>
-        </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
+  <!-- TESTIMONIALS & FOOTER -->
   <footer class="footer">
-    <div class="wrapper">
-      <p>© 2025 LegalDad. Всі права захищені.</p>
-      <p>Пишіть нам: <a href="mailto:alexxtrumpp@gmail.com">alexxtrumpp@gmail.com</a></p>
+    <div class="container">
+      <div class="testimonials cards cards--horizontal cards--small">
+        <div class="card card--testimonial">
+          <p>“Дякую, що врятували мій час і нерви! Заяву до ТЦК подано без помилок.”</p>
+          <cite>— Олександр, Київ</cite>
+        </div>
+        <div class="card card--testimonial">
+          <p>“Pro-пакет спростив подачу одразу трьох заяв, Telegram-бот тримає у курсі.”</p>
+          <cite>— Марія, Львів</cite>
+        </div>
+        <div class="card card--testimonial">
+          <p>“Enterprise підтримка по Zoom — це рівень! Рекомендую.”</p>
+          <cite>— Іван, Харків</cite>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <small>© 2025 LegalDad. Всі права захищені. <a href="mailto:alexxtrumpp@gmail.com">alexxtrumpp@gmail.com</a></small>
+      </div>
     </div>
   </footer>
-
-</body>
-</html>
-
 </body>
 </html>
