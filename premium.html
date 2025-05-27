@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LegalDad — Юридична підтримка від тата (Premium версія)</title>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LegalDad — Юридична підтримка від тата (Premium)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     body {
       background-color: #0e0e0e;
@@ -50,9 +50,10 @@
     }
     .packages {
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      flex-direction: row;
+      justify-content: center;
       gap: 2rem;
+      flex-wrap: wrap;
       padding: 0 1rem 3rem;
     }
     .card {
@@ -60,11 +61,7 @@
       padding: 2rem;
       border-radius: 12px;
       max-width: 320px;
-      box-shadow: none
       text-align: center;
-    }
-    .card-premium {
-      border: 2px solid gold;
     }
     .card h3 {
       font-size: 1.5rem;
@@ -95,13 +92,15 @@
     }
     footer {
       text-align: center;
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       padding: 2rem;
-      color: #888;
+      color: #ccc;
+      background-color: #1a1a1a;
     }
     footer a {
-      color: #aaaaff;
-      text-decoration: none;
+      color: gold;
+      text-decoration: underline;
+      font-weight: 600;
     }
   </style>
 </head>
@@ -141,7 +140,7 @@
       <button class="buy-button">Придбати</button>
     </div>
 
-    <div class="card card-premium">
+    <div class="card">
       <h3>Premium</h3>
       <ul>
         <li>Усе з пакета Plus</li>
