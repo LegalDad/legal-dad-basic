@@ -13,100 +13,95 @@
       margin: 0;
       padding: 0;
     }
-
     header {
       text-align: center;
       padding: 4rem 2rem 2rem;
     }
-
     header h1 {
       font-size: 2.5rem;
       font-weight: 800;
     }
-
     header p {
       font-size: 1.2rem;
       font-weight: 400;
       max-width: 800px;
       margin: 1rem auto 0;
     }
-
-    section {
-      padding: 2rem;
-    }
-
     h2 {
       text-align: center;
       font-size: 2rem;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
       position: relative;
       display: inline-block;
-      color: #fff;
     }
-
     h2::after {
       content: "";
       display: block;
+      width: 100%;
       height: 3px;
       background-color: gold;
-      width: 60%;
-      margin: 0.5rem auto 0;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
     }
-
-    .pricing-container {
+    .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .packages {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
       gap: 2rem;
-      flex-wrap: wrap;
-      margin-top: 2rem;
+      padding: 0 1rem 3rem;
     }
-
     .card {
-      background-color: #1c1c1c;
-      border-radius: 12px;
+      background-color: #1a1a1a;
       padding: 2rem;
-      max-width: 300px;
-      box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
+      border-radius: 12px;
+      max-width: 320px;
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.08);
       text-align: center;
     }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    .card-premium {
+      border: 2px solid gold;
     }
-
     .card h3 {
       font-size: 1.5rem;
+      font-weight: 700;
       margin-bottom: 1rem;
-      color: #fff;
     }
-
-    .card p {
-      font-size: 1rem;
+    .card ul {
+      list-style: none;
+      padding: 0;
       margin-bottom: 1rem;
-      color: #ccc;
     }
-
+    .card ul li {
+      margin-bottom: 0.5rem;
+    }
     .price {
-      font-size: 1.3rem;
-      font-weight: bold;
-      color: gold;
+      font-size: 1.4rem;
+      font-weight: 800;
       margin-bottom: 1rem;
+      color: gold;
     }
-
-    button {
+    .buy-button {
       background-color: gold;
       border: none;
-      padding: 0.5rem 1rem;
-      font-weight: bold;
+      padding: 0.7rem 1.5rem;
+      font-weight: 700;
       border-radius: 6px;
       cursor: pointer;
-      transition: background-color 0.3s;
     }
-
-    button:hover {
-      background-color: #ffd700;
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      padding: 2rem;
+      color: #888;
+    }
+    footer a {
+      color: #aaaaff;
+      text-decoration: none;
     }
   </style>
 </head>
@@ -116,34 +111,53 @@
     <p>Я не юрист. Я батько, який пройшов крізь усе — і не здався. Я борюся не за формальне право на сина, а за його реальне повернення додому, в Україну. Це мій шлях, мій досвід, мої шаблони — для тих, хто бореться і не здається.</p>
   </header>
 
-  <section style="text-align: center;">
+  <div class="section-title">
     <h2>Наші пакети</h2>
-    <div class="pricing-container">
-      <div class="card">
-        <h3>Standard</h3>
-        <p>Шаблон заяви до Мін’юсту (Гаага)<br>Шаблон до ТЦК на скасування повістки<br>Антиколекторський гайд + шаблони</p>
-        <div class="price">349 грн</div>
-        <button>Придбати</button>
-      </div>
-      <div class="card">
-        <h3>Plus</h3>
-        <p>Усе з пакета Standard<br>Пакет «Право на батьківство»<br>Скарга до омбудсмена<br>Збірка прикладів заяв<br>Чекліст «Що підготувати»</p>
-        <div class="price">849 грн</div>
-        <button>Придбати</button>
-      </div>
-      <div class="card" style="border: 2px solid gold;">
-        <h3>Premium</h3>
-        <p>Усе з пакета Plus<br>Комплекс планів (суд, соцслужби, прокуратура)<br>Шаблон скарги на дії ТЦК<br>1 чат з відповіддю (Telegram/email)<br>Пріоритетне опрацювання звернень</p>
-        <div class="price">1899 грн</div>
-        <button>Придбати</button>
-      </div>
+  </div>
+
+  <div class="packages">
+    <div class="card">
+      <h3>Standard</h3>
+      <ul>
+        <li>Шаблон заяви до Мін’юсту (Гаага)</li>
+        <li>Шаблон до ТЦК на скасування повістки</li>
+        <li>Антиколекторський гайд + шаблони</li>
+      </ul>
+      <div class="price">349 грн</div>
+      <button class="buy-button">Придбати</button>
     </div>
-  </section>
+
+    <div class="card">
+      <h3>Plus</h3>
+      <ul>
+        <li>Усе з пакета Standard</li>
+        <li>Пакет «Право на батьківство» (5+ шаблонів)</li>
+        <li>Скарга до омбудсмена</li>
+        <li>Збірка прикладів заяв з досвіду</li>
+        <li>Чеклист «Що підготувати для дій»</li>
+        <li>Шаблон заяви в поліцію про перешкоджання</li>
+      </ul>
+      <div class="price">849 грн</div>
+      <button class="buy-button">Придбати</button>
+    </div>
+
+    <div class="card card-premium">
+      <h3>Premium</h3>
+      <ul>
+        <li>Усе з пакета Plus</li>
+        <li>Шаблон заяви до поліції про незаконне вивезення дитини</li>
+        <li>Заява в соцслужбу щодо повернення дитини</li>
+        <li>Додаткові шаблони (суд, прокуратура, соцслужби)</li>
+        <li>1 діалог у чаті з підтримкою (Telegram/email)</li>
+        <li>Пріоритетна обробка звернень</li>
+      </ul>
+      <div class="price">1899 грн</div>
+      <button class="buy-button">Придбати</button>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 LegalDad. Всі права захищено. Зв’язок: <a href="mailto:alexxtrumpp@gmail.com">alexxtrumpp@gmail.com</a>
+  </footer>
 </body>
 </html>
-
-
-
-
-
-
