@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LegalDad — Юридична підтримка від тата (Premium)</title>
+  <title>LegalDad — Юридична підтримка від папи (Premium)</title>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     body {
@@ -65,13 +65,17 @@
       flex: 1 1 280px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 0 40px rgba(255, 215, 0, 0.2);
+    }
+    .card-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     .card h3 {
       font-size: 1.5rem;
@@ -86,12 +90,16 @@
     .card ul li {
       margin-bottom: 0.5rem;
     }
-    .card .bottom {
-      margin-top: auto;
+    .card-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2rem;
     }
     .price {
       font-size: 1.4rem;
       font-weight: 800;
+      margin-bottom: 1rem;
       color: gold;
     }
     .buy-button {
@@ -101,7 +109,6 @@
       font-weight: 700;
       border-radius: 6px;
       cursor: pointer;
-      margin-top: 0.8rem;
     }
     footer {
       text-align: center;
@@ -133,7 +140,7 @@
 <body>
   <header>
     <h1>LegalDad</h1>
-    <p>Я не юрист. Я батько, який пройшов крізь усе — і не здався. Я борюся не за формальне право на сина, а за його реальне повернення додому, в Україну. Це мій шлях, мій досвід, мої шаблони — для тих, хто бореться і не здається.</p>
+    <p>Я не юрист. Я папа, який пройшов крізь усе сам — і не здався. Я борюся не за формальне право на сина, а за його реальне повернення додому, в Україну. Це мій шлях, мій досвід, мої шаблони — для тих, хто бореться і не здається.</p>
   </header>
 
   <div class="section-title">
@@ -142,47 +149,53 @@
 
   <div class="packages">
     <div class="card">
-      <h3>Standard</h3>
-      <ul>
-        <li>Шаблон заяви до Мін’юсту (Гаага)</li>
-        <li>Шаблон до ТЦК на скасування повістки</li>
-        <li>Антиколекторський гайд + шаблони</li>
-      </ul>
-      <div class="bottom">
-        <div class="price">349 грн</div>
-        <button class="buy-button">Придбати</button>
+      <div class="card-content">
+        <h3>Standard</h3>
+        <ul>
+          <li>Шаблон заяви до Мін’юсту (Гаага)</li>
+          <li>Шаблон до ТЦК на скасування повістки</li>
+          <li>Антиколекторський гайд + шаблони</li>
+        </ul>
+        <div class="card-footer">
+          <div class="price">349 грн</div>
+          <button class="buy-button">Придбати</button>
+        </div>
       </div>
     </div>
 
     <div class="card">
-      <h3>Plus</h3>
-      <ul>
-        <li>Усе з пакета Standard</li>
-        <li>Пакет «Право на батьківство» (5+ шаблонів)</li>
-        <li>Скарга до омбудсмена</li>
-        <li>Збірка прикладів заяв з досвіду</li>
-        <li>Чеклист «Що підготувати для дій»</li>
-        <li>Шаблон заяви в поліцію про перешкоджання</li>
-      </ul>
-      <div class="bottom">
-        <div class="price">849 грн</div>
-        <button class="buy-button">Придбати</button>
+      <div class="card-content">
+        <h3>Plus</h3>
+        <ul>
+          <li>Усе з пакета Standard</li>
+          <li>Пакет «Право на батьківство» (5+ шаблонів)</li>
+          <li>Скарга до омбудсмена</li>
+          <li>Збірка прикладів заяв з досвіду</li>
+          <li>Чеклист «Що підготувати для дій»</li>
+          <li>Шаблон заяви в поліцію про перешкоджання</li>
+        </ul>
+        <div class="card-footer">
+          <div class="price">849 грн</div>
+          <button class="buy-button">Придбати</button>
+        </div>
       </div>
     </div>
 
     <div class="card">
-      <h3>Premium</h3>
-      <ul>
-        <li>Усе з пакета Plus</li>
-        <li>Шаблон заяви до поліції про незаконне вивезення дитини</li>
-        <li>Заява в соцслужбу щодо повернення дитини</li>
-        <li>Додаткові шаблони (суд, прокуратура, соцслужби)</li>
-        <li>1 діалог у чаті з підтримкою (Telegram/email)</li>
-        <li>Пріоритетна обробка звернень</li>
-      </ul>
-      <div class="bottom">
-        <div class="price">1899 грн</div>
-        <button class="buy-button">Придбати</button>
+      <div class="card-content">
+        <h3>Premium</h3>
+        <ul>
+          <li>Усе з пакета Plus</li>
+          <li>Шаблон заяви до поліції про незаконне вивезення дитини</li>
+          <li>Заява в соцслужбу щодо повернення дитини</li>
+          <li>Додаткові шаблони (суд, прокуратура, соцслужби)</li>
+          <li>1 діалог у чаті з підтримкою (Telegram/email)</li>
+          <li>Пріоритетна обробка звернень</li>
+        </ul>
+        <div class="card-footer">
+          <div class="price">1899 грн</div>
+          <button class="buy-button">Придбати</button>
+        </div>
       </div>
     </div>
   </div>
