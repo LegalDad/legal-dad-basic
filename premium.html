@@ -63,6 +63,11 @@
       text-align: center;
       box-shadow: 0 0 30px rgba(255, 215, 0, 0.08);
       flex: 1 1 280px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 40px rgba(255, 215, 0, 0.2);
     }
     .card h3 {
       font-size: 1.5rem;
@@ -93,20 +98,27 @@
     }
     footer {
       text-align: center;
-      font-size: 0.9rem;
+      font-size: 1rem;
       padding: 2rem;
-      color: #ccc;
+      color: #f0f0f0;
       background-color: #1a1a1a;
     }
     footer a {
       color: gold;
-      text-decoration: underline;
+      text-decoration: none;
       font-weight: 600;
+    }
+    footer a:hover {
+      text-decoration: underline;
     }
     @media (max-width: 768px) {
       .packages {
         flex-direction: column;
         align-items: center;
+      }
+      .card {
+        max-width: 100%;
+        margin: 0 auto;
       }
     }
   </style>
